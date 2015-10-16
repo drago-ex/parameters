@@ -1,7 +1,7 @@
 {
 	"name": "drago-fw/dirs",
 	"type": "library",
-	"description": "Easier access to individual directories for Nette Framework",
+	"description": "Easier access to individual directories",
 	"license": ["MIT"],
 	"authors": [
 		{

@@ -1,5 +1,5 @@
 ## Dirs
-Easier access to individual directories for Nette Framework.
+Easier access to individual directories.
 
 ## Installation
 Add the configuration file:

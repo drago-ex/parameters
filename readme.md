@@ -1,7 +1,7 @@
 ## Dirs
 Easier access to individual directories.
 
-## instructions
+## Instructions
 Inject the class to base Presenter and use
 ```php
 $this->dirs->getPublicDir();

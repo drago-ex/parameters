@@ -1,0 +1,20 @@
+{
+	"name": "drago-fw/dirs",
+	"type": "library",
+	"description": "Easier access to individual directories for Nette Framework",
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Zdeněk Papučík",
+			"homepage": "https://github.com/accgit"
+		}
+	],
+	"require": {
+		"php": ">=5.6.0",
+		"nette/di": "~2.3",
+		"nette/utils": "~2.3"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}

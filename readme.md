@@ -8,7 +8,7 @@ $this->dirs->getPublicDir();
 ...
 ```
 
-## Installation
+## Installatio
 Add the configuration file:
 
 ```neon

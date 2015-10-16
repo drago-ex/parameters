@@ -5,13 +5,13 @@
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Application\Directories;
-use Nette\DI\CompilerExtension;
+use Nette;
 
 /**
  * Handing the system dependencies container.
  * @author Zdeněk Papučík
  */
-class DirsExtension extends CompilerExtension
+class DirsExtension extends Nette\DI\CompilerExtension
 {
 	/**
 	 * @var array

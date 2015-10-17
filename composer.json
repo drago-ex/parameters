@@ -1,7 +1,7 @@
 {
 	"name": "drago-fw/dirs",
 	"type": "library",
-	"description": "Drago Framework - easier access to individual directories",
+	"description": "Eeasier access to individual directories",
 	"license": ["MIT"],
 	"authors": [
 		{

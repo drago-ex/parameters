@@ -13,13 +13,19 @@ use Nette;
  */
 class Dirs extends Nette\Object
 {
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $appDir;
 
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $wwwDir;
 
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $tempDir;
 
 	public function __construct($appDir, $wwwDir, $tempDir)

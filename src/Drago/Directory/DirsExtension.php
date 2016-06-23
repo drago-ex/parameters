@@ -26,7 +26,7 @@ class DirsExtension extends Nette\DI\CompilerExtension
 	{
 		$conf = $this->getConfig($this->defaults);
 		$this->getContainerBuilder()
-			->addDefinition($this->prefix('directories'))
+			->addDefinition($this->prefix('Directory'))
 			->setClass('Drago\Directory\Dirs', [$conf['appDir'], $conf['wwwDir'], $conf['tempDir']]);
 	}
 

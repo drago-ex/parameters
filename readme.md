@@ -4,17 +4,14 @@ Easier access to individual directories.
 ## Instruction
 Inject the class to Presenter and use
 ```php
-// Public directory
-$this->dirs->getPublicDir();
+// Web directory
+$this->dirs->getWebDir();
 
 // Temporary directory
 $this->dirs->getTempDir();
 
-// Cache directory
-$this->dirs->getCacheDir();
-
-// Modules directory
-$this->dirs->getModulesDir();
+// App directory
+$this->dirs->getAppDir();
 ```
 
 Add the configuration file:

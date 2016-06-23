@@ -17,5 +17,5 @@ $this->dirs->getAppDir();
 Add the configuration file:
 ```yaml
 extensions:
-	dirs: Drago\Application\Directories\DirsExtension
+	dirs: Drago\Directory\DirsExtension
 ```

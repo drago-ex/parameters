@@ -1,8 +1,11 @@
 ## Dirs
+
 Easier access to individual directories.
 
 ## Instruction
+
 Inject the class to Presenter and use:
+
 ```php
 // Web directory
 $this->dirs->getWebDir();
@@ -15,6 +18,7 @@ $this->dirs->getAppDir();
 ```
 
 Add the configuration file:
+
 ```yaml
 extensions:
 	dirs: Drago\Directory\DirsExtension

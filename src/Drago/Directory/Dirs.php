@@ -11,8 +11,10 @@ use Nette;
  * Easier access to individual directories.
  * @author Zdeněk Papučík
  */
-class Dirs extends Nette\Object
+class Dirs
 {
+	use Nette\SmartObject;
+
 	/**
 	 * @var string
 	 */

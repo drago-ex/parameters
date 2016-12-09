@@ -1,8 +1,5 @@
 {
 	"name": "drago-ex/dirs",
-	"replace": {
-		"drago-fw/dirs": "self.version"
-	},
 	"type": "library",
 	"description": "Eeasier access to individual directories",
 	"license": ["MIT"],
@@ -16,6 +13,9 @@
 		"php": ">=5.6.0",
 		"nette/di": "~2.4.0",
 		"nette/utils": "~2.4.0"
+	},
+	"replace": {
+		"drago-fw/dirs": "*"
 	},
 	"autoload": {
 		"classmap": ["src/"]

@@ -1,5 +1,5 @@
 {
-	"name": "drago-fw/dirs",
+	"name": "drago-ex/dirs",
 	"type": "library",
 	"description": "Eeasier access to individual directories",
 	"license": ["MIT"],

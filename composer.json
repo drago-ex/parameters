@@ -1,5 +1,8 @@
 {
 	"name": "drago-ex/dirs",
+	"replace": {
+		"drago-fw/database": "self.version"
+	},
 	"type": "library",
 	"description": "Eeasier access to individual directories",
 	"license": ["MIT"],

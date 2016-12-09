@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/dirs",
 	"replace": {
-		"drago-fw/database": "self.version"
+		"drago-fw/dirs": "self.version"
 	},
 	"type": "library",
 	"description": "Eeasier access to individual directories",

@@ -1,4 +1,4 @@
-## Dirs
+## Drago Dirs
 
 Easier access to individual directories.
 

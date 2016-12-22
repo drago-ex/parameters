@@ -4,6 +4,15 @@ Easier access to individual directories.
 
 ## Instruction
 
+Add the configuration file:
+
+```yaml
+extensions:
+
+	# Easier access to individual directories
+	dirs: Drago\Directory\DirsExtension
+```
+
 Inject the class to presenter and use:
 
 ```php
@@ -15,13 +24,4 @@ $this->dirs->getTempDir();
 
 // App directory
 $this->dirs->getAppDir();
-```
-
-Add the configuration file:
-
-```yaml
-extensions:
-
-	# Easier access to individual directories
-	dirs: Drago\Directory\DirsExtension
 ```

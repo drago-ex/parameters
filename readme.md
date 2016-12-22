@@ -4,7 +4,7 @@ Easier access to individual directories.
 
 ## Instruction
 
-Inject the class to Presenter and use:
+Inject the class to presenter and use:
 
 ```php
 // Web directory
@@ -17,7 +17,7 @@ $this->dirs->getTempDir();
 $this->dirs->getAppDir();
 ```
 
-Add the configuration file:
+Add the configuration file (.neon):
 
 ```yaml
 extensions:

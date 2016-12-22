@@ -17,7 +17,7 @@ $this->dirs->getTempDir();
 $this->dirs->getAppDir();
 ```
 
-Add the configuration file (.neon):
+Add the configuration file:
 
 ```yaml
 extensions:

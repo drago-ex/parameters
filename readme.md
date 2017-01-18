@@ -9,7 +9,7 @@ Add the configuration file:
 ```yaml
 extensions:
 
-	# Easier access to individual directories
+	# easier access to individual directories
 	dirs: Drago\Directory\DirsExtension
 ```
 

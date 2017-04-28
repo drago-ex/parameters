@@ -6,7 +6,7 @@ Easier access to individual directories.
 
 Add the configuration file:
 
-```yaml
+```
 extensions:
 
 	# easier access to individual directories

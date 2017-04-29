@@ -9,7 +9,7 @@ Add the configuration file:
 ```
 extensions:
 
-	# easier access to individual directories
+	# Easier access to individual directories.
 	dirs: Drago\Directory\DirsExtension
 ```
 

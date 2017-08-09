@@ -9,7 +9,6 @@ use Nette;
 
 /**
  * Easier access to individual directories.
- * @author Zdeněk Papučík
  */
 class Dirs
 {

@@ -9,7 +9,6 @@ use Nette;
 
 /**
  * Handing the system dependencies container.
- * @author Zdeněk Papučík
  */
 class DirsExtension extends Nette\DI\CompilerExtension
 {

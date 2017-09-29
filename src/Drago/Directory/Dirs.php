@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Extending for Nette Framework
+ * Extension Nette
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Directory;
 use Nette;
 
 /**
- * Easier access to individual directories.
+ * Snadnější přístup k jednotlivým adresářům.
  */
 class Dirs
 {
@@ -37,7 +37,7 @@ class Dirs
 	}
 
 	/**
-	 * Web directory.
+	 * Adresář www.
 	 * @return string
 	 */
 	public function getWebDir()
@@ -46,7 +46,7 @@ class Dirs
 	}
 
 	/**
-	 * Temporary directory.
+	 * Adresář dočasných souborů (cache a temporary).
 	 * @return string
 	 */
 	public function getTempDir()
@@ -55,7 +55,7 @@ class Dirs
 	}
 
 	/**
-	 * App directory.
+	 * Adreséř aplikace.
 	 * @return string
 	 */
 	public function getAppDir()

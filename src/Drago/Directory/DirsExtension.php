@@ -1,14 +1,14 @@
 <?php
 
 /**
- * Extending for Nette Framework
+ * Extension Nette
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Directory;
 use Nette;
 
 /**
- * Handing the system dependencies container.
+ * Předání závislostí systémovému kontejneru.
  */
 class DirsExtension extends Nette\DI\CompilerExtension
 {

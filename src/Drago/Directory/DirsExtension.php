@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Nette
+ * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Directory;

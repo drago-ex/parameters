@@ -4,6 +4,17 @@
 
 Snadnější přístup k jednotlivým adresářům.
 
+## Požadavky
+
+- PHP 7.0.8 nebo vyšší
+- composer
+
+## Instalace
+
+```
+composer require drago-ex/dirs
+```
+
 ## Registrace rozšíření
 
 ```

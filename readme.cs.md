@@ -30,7 +30,7 @@ extensions:
 $this->getWebDir();
 ```
 
-## Adresář dočasných souborů (cache a temporary)
+## Adresář dočasných souborů
 
 ```php
 $this->getTempDir();

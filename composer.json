@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/dirs",
 	"type": "library",
-	"description": "Snadnější přístup k jednotlivým adresářům.",
+	"description": "Easier access to individual directories in an application.",
 	"license": ["MIT"],
 	"authors": [
 		{

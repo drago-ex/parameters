@@ -8,7 +8,7 @@ namespace Drago\Directory;
 use Nette;
 
 /**
- * Snadnější přístup k jednotlivým adresářům.
+ * Easier access to individual directories in an application.
  */
 class Dirs
 {
@@ -37,7 +37,7 @@ class Dirs
 	}
 
 	/**
-	 * Adresář www.
+	 * Directory www.
 	 * @return string
 	 */
 	public function getWebDir()
@@ -46,7 +46,7 @@ class Dirs
 	}
 
 	/**
-	 * Adresář dočasných souborů (cache a temporary).
+	 * Directory of temporary files.
 	 * @return string
 	 */
 	public function getTempDir()
@@ -55,7 +55,7 @@ class Dirs
 	}
 
 	/**
-	 * Adreséř aplikace.
+	 * Application directory.
 	 * @return string
 	 */
 	public function getAppDir()

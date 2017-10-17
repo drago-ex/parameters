@@ -2,41 +2,41 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c4e704cb7bb04cdc83335fd17fefeb81)](https://www.codacy.com/app/accgit/dirs?utm_source=github.com&utm_medium=referral&utm_content=drago-ex/dirs&utm_campaign=badger)
 
-Easier access to individual directories in an application.
+Snadnější přístup k jednotlivým adresářům v aplikaci.
 
-## Requirements
+## Požadavky
 
-- PHP 7.0.8 or higher
+- PHP 7.0.8 nebo vyšší
 - composer
 
-## Installation
+## Instalace
 
 ```
 composer require drago-ex/dirs
 ```
 
-## Register the extension
+## Registrace rozšíření
 
 ```
 extensions:
 
-	# Easier access to individual directories in an application.
+	# Snadnější přístup k jednotlivým adresářům v aplikaci.
 	dirs: Drago\Directory\DirsExtension
 ```
 
-## Directory www
+## Adresář www
 
 ```php
 $this->getWebDir();
 ```
 
-## Directory of temporary files
+## Adresář dočasných souborů (cache a temporary)
 
 ```php
 $this->getTempDir();
 ```
 
-## Application directory
+## Adreséř aplikace
 
 ```php
 $this->getAppDir();

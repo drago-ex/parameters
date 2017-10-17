@@ -8,7 +8,7 @@ namespace Drago\Directory;
 use Nette;
 
 /**
- * Předání závislostí systémovému kontejneru.
+ * Adding dependencies to the system container.
  */
 class DirsExtension extends Nette\DI\CompilerExtension
 {

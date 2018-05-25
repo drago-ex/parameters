@@ -6,7 +6,7 @@ Easier access to individual directories in an application.
 
 ## Requirements
 
-- PHP 7.0.8 or higher
+- PHP 7.1 or higher
 - composer
 
 ## Installation
@@ -20,7 +20,7 @@ composer require drago-ex/dirs
 ```
 extensions:
 
-	# Easier access to individual directories in an application.
+	# easier access to individual directories in an application
 	dirs: Drago\Directory\DirsExtension
 ```
 

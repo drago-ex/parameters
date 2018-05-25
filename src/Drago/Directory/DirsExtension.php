@@ -1,5 +1,8 @@
 <?php
 
+// Enable strict mode.
+declare(strict_types = 1);
+
 /**
  * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
@@ -12,16 +15,15 @@ use Nette;
  */
 class DirsExtension extends Nette\DI\CompilerExtension
 {
-	/**
-	 * @var array
-	 */
+	/** @var array */
 	public $defaults  = [
 		'appDir'  => '%appDir%',
 		'wwwDir'  => '%wwwDir%',
 		'tempDir' => '%tempDir%',
 	];
 
-	public function loadConfiguration()
+
+	public function loadConfiguration(): void
 	{
 		$conf = $this->getConfig($this->defaults);
 		$this->getContainerBuilder()

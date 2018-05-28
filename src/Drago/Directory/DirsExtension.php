@@ -15,13 +15,14 @@ use Nette;
  */
 class DirsExtension extends Nette\DI\CompilerExtension
 {
-	/** @var array */
+	/**
+	 * @var array
+	 */
 	public $defaults  = [
 		'appDir'  => '%appDir%',
 		'wwwDir'  => '%wwwDir%',
 		'tempDir' => '%tempDir%',
 	];
-
 
 	public function loadConfiguration(): void
 	{

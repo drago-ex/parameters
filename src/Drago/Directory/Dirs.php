@@ -17,23 +17,27 @@ class Dirs
 {
 	use Nette\SmartObject;
 
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $appDir;
 
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $wwwDir;
 
-	/** @var string */
+	/**
+	 * @var string
+	 */
 	private $tempDir;
 
-
-	public function __construct($appDir, $wwwDir, $tempDir)
+	public function __construct(string $appDir, string $wwwDir, string $tempDir)
 	{
 		$this->appDir  = $appDir;
 		$this->wwwDir  = $wwwDir;
 		$this->tempDir = $tempDir;
 	}
-
 
 	/**
 	 * Directory www.
@@ -43,7 +47,6 @@ class Dirs
 		return $this->wwwDir;
 	}
 
-
 	/**
 	 * Directory of temporary files.
 	 */
@@ -51,7 +54,6 @@ class Dirs
 	{
 		return $this->tempDir;
 	}
-
 
 	/**
 	 * Application directory.

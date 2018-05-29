@@ -11,13 +11,14 @@
 	],
 	"require": {
 		"php": ">=7.1",
-		"nette/di": "^2.4",
-		"nette/utils": "^2.4"
+		"nette/di": "^3.0",
+		"nette/utils": "^3.0"
 	},
 	"replace": {
 		"drago-fw/dirs": "self.version"
 	},
 	"autoload": {
 		"classmap": ["src/"]
-	}
+	},
+	"minimum-stability": "dev"
 }

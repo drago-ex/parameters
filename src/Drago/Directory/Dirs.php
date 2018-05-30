@@ -1,8 +1,5 @@
 <?php
 
-// Enable strict mode.
-declare(strict_types = 1);
-
 /**
  * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
@@ -32,7 +29,7 @@ class Dirs
 	 */
 	private $tempDir;
 
-	public function __construct(string $appDir, string $wwwDir, string $tempDir)
+	public function __construct($appDir, $wwwDir, $tempDir)
 	{
 		$this->appDir  = $appDir;
 		$this->wwwDir  = $wwwDir;
@@ -41,24 +38,27 @@ class Dirs
 
 	/**
 	 * Directory www.
+	 * @return string
 	 */
-	public function getWebDir(): string
+	public function getWebDir()
 	{
 		return $this->wwwDir;
 	}
 
 	/**
 	 * Directory of temporary files.
+	 * @return string
 	 */
-	public function getTempDir(): string
+	public function getTempDir()
 	{
 		return $this->tempDir;
 	}
 
 	/**
 	 * Application directory.
+	 * @return string
 	 */
-	public function getAppDir(): string
+	public function getAppDir()
 	{
 		return $this->appDir;
 	}

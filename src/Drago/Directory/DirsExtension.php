@@ -1,8 +1,5 @@
 <?php
 
-// Enable strict mode.
-declare(strict_types = 1);
-
 /**
  * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
@@ -24,7 +21,7 @@ class DirsExtension extends Nette\DI\CompilerExtension
 		'tempDir' => '%tempDir%',
 	];
 
-	public function loadConfiguration(): void
+	public function loadConfiguration()
 	{
 		$conf = $this->getConfig($this->defaults);
 		$this->getContainerBuilder()

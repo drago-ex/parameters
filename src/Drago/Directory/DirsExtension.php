@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types = 1);
+
 /**
  * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Directory;
 use Nette;
+use Tracy\Debugger;
 
 /**
  * Adding dependencies to the system container.
@@ -21,12 +24,12 @@ class DirsExtension extends Nette\DI\CompilerExtension
 		'tempDir' => '%tempDir%',
 	];
 
-	public function loadConfiguration()
+
+	public function loadConfiguration(): void
 	{
 		$conf = $this->getConfig($this->defaults);
 		$this->getContainerBuilder()
 			->addDefinition($this->prefix('directory'))
 			->setClass('Drago\Directory\Dirs', [$conf['appDir'], $conf['wwwDir'], $conf['tempDir']]);
 	}
-
 }

@@ -7,6 +7,7 @@ declare(strict_types = 1);
  * Copyright (c) 2015, Zdeněk Papučík
  */
 namespace Drago\Directory;
+
 use Nette;
 use Tracy\Debugger;
 

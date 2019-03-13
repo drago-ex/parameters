@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 /**
  * Drago Dirs
  * Copyright (c) 2015, Zdeněk Papučík
@@ -29,6 +31,7 @@ class Dirs
 	 */
 	private $tempDir;
 
+
 	public function __construct($appDir, $wwwDir, $tempDir)
 	{
 		$this->appDir  = $appDir;
@@ -36,31 +39,30 @@ class Dirs
 		$this->tempDir = $tempDir;
 	}
 
+
 	/**
 	 * Directory www.
-	 * @return string
 	 */
-	public function getWebDir()
+	public function getWebDir(): string
 	{
 		return $this->wwwDir;
 	}
 
+
 	/**
 	 * Directory of temporary files.
-	 * @return string
 	 */
-	public function getTempDir()
+	public function getTempDir(): string
 	{
 		return $this->tempDir;
 	}
 
+
 	/**
 	 * Application directory.
-	 * @return string
 	 */
-	public function getAppDir()
+	public function getAppDir(): string
 	{
 		return $this->appDir;
 	}
-
 }

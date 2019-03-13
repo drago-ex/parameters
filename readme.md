@@ -4,7 +4,7 @@ Easier access to individual directories in an application.
 
 ## Requirements
 
-- PHP 5.6 or higher
+- PHP 7.2 or higher
 - composer
 
 ## Installation

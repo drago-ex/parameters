@@ -1,6 +1,6 @@
 ## Drago Dirs
 
-Easier access to individual directories in an application.
+Access to individual directories in the application.
 
 ## Requirements
 
@@ -13,29 +13,27 @@ Easier access to individual directories in an application.
 composer require drago-ex/dirs
 ```
 
-## Register the extension
+## Register services
 
 ```
-extensions:
-
-	# easier access to individual directories in an application
-	dirs: Drago\Directory\DirsExtension
+services:
+	- Drago\Dirs\DirectoryPath(%appDir%, %wwwDir%, %tempDir%)
 ```
 
-## Directory www
-
-```php
-$this->getWebDir();
-```
-
-## Directory of temporary files
-
-```php
-$this->getTempDir();
-```
-
-## Application directory
+## Path to application directory
 
 ```php
 $this->getAppDir();
+```
+
+## Path to public directory
+
+```php
+$this->getWwwDir();
+```
+
+## Path to temporary directory
+
+```php
+$this->getTempDir();
 ```

@@ -10,6 +10,7 @@ namespace Drago\Dirs;
 
 use Nette\SmartObject;
 
+
 /**
  * Access to individual directories in the application.
  * @package Drago\Dirs

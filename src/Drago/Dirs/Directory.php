@@ -3,19 +3,19 @@
 declare(strict_types = 1);
 
 /**
- * Drago Dirs
+ * Drago Parameters
  * Package built on Nette Framework
  */
-namespace Drago\Dirs;
+namespace Drago\Parameters;
 
 use Nette\SmartObject;
 
 
 /**
  * Access to individual directories in the application.
- * @package Drago\Dirs
+ * @package Drago\Parameters
  */
-class DirectoryPath
+class Directory
 {
 	use SmartObject;
 
@@ -28,12 +28,16 @@ class DirectoryPath
 	/** @var string */
 	private $tempDir;
 
+	/** @var string */
+	private $vendorDir;
 
-	public function __construct($appDir, $wwwDir, $tempDir)
+
+	public function __construct(string $appDir, string $wwwDir, string $tempDir, string $vendorDir)
 	{
-		$this->appDir  = $appDir;
-		$this->wwwDir  = $wwwDir;
+		$this->appDir = $appDir;
+		$this->wwwDir = $wwwDir;
 		$this->tempDir = $tempDir;
+		$this->vendorDir = $vendorDir;
 	}
 
 
@@ -61,5 +65,14 @@ class DirectoryPath
 	public function getTempDir(): string
 	{
 		return $this->tempDir;
+	}
+
+
+	/**
+	 * Path to vendor directory.
+	 */
+	public function getVendorDir(): string
+	{
+		return $this->vendorDir;
 	}
 }

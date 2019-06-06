@@ -1,6 +1,6 @@
-## Drago Dirs
+## Drago Parameters
 
-Access to individual directories in the application.
+Access to parameters in the application.
 
 ## Requirements
 
@@ -10,28 +10,17 @@ Access to individual directories in the application.
 ## Installation
 
 ```
-composer require drago-ex/dirs
+composer require drago-ex/parameters
 ```
 
-## Register services
+## Register extension
 
 ```
-services:
-	- Drago\Dirs\DirectoryPath(%appDir%, %wwwDir%, %tempDir%)
+extensions:
+	- Drago\Parameters\ParametersExtension
 ```
 
-We inject the service in the presenter.
-
-```php
-/** @var Drago\Dirs\DirectoryPath @inject */
-public $directoryPath;
-```
-
-Or use Trait.
-
-```php
-use Drago\Dirs\DirectoryPath;
-```
+and in presenter use inject class.
 
 ## Path to application directory
 
@@ -49,4 +38,16 @@ $this->getWwwDir();
 
 ```php
 $this->getTempDir();
+```
+
+## Path to vendor directory
+
+```php
+$this->getVendorDir();
+```
+
+## Current application environment
+
+```php
+$this->isProduction();
 ```

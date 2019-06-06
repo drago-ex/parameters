@@ -8,6 +8,7 @@ declare(strict_types = 1);
  */
 namespace Drago\Dirs;
 
+
 /**
  * Access to individual directories in the application.
  * @package Drago\Dirs

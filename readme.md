@@ -57,9 +57,3 @@ $this->getTempDir();
 ```php
 $this->getVendorDir();
 ```
-
-## Current application environment
-
-```php
-$this->isProduction();
-```

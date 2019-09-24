@@ -6,9 +6,9 @@ use Tester\Assert;
 
 require __DIR__ . '/bootstrap.php';
 
-$class = new \Drago\Parameters\Directory('/app', '/www', '/temp', '/vendor');
+$parameters = new \Drago\Parameters\Directory('/app', '/www', '/temp', '/vendor');
 
-Assert::type('string', $class->getAppDir());
-Assert::type('string', $class->getWwwDir());
-Assert::type('string', $class->getTempDir());
-Assert::type('string', $class->getVendorDir());
+Assert::type('string', $parameters->getAppDir());
+Assert::type('string', $parameters->getWwwDir());
+Assert::type('string', $parameters->getTempDir());
+Assert::type('string', $parameters->getVendorDir());

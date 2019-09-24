@@ -29,9 +29,5 @@ class ParametersExtension extends CompilerExtension
 				$params['tempDir'],
 				$params['vendorDir'],
 			]);
-
-		$builder
-			->addDefinition($this->prefix('Environment'))
-			->setFactory(Environment::class, [$params['productionMode']]);
 	}
 }

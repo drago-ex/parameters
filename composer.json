@@ -14,9 +14,9 @@
 		"nette/di": "^3.0",
 		"nette/utils": "^3.0"
 	},
-  	"require-dev": {
-	  	"nette/tester": "^2.0",
-	  	"tracy/tracy": "^2.3"
+	"require-dev": {
+		"nette/tester": "^2.0",
+		"tracy/tracy": "^2.3"
 	},
 	"autoload": {
 		"classmap": ["src/"]

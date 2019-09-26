@@ -18,7 +18,6 @@ Access to parameters in the application.
 - composer
 
 ## Installation
-
 ```
 composer require drago-ex/parameters
 ```

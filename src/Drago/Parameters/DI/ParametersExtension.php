@@ -6,6 +6,7 @@ declare(strict_types = 1);
  * Drago Parameters
  * Package built on Nette Framework
  */
+
 namespace Drago\Parameters;
 
 use Nette\DI\CompilerExtension;
@@ -20,7 +21,7 @@ class ParametersExtension extends CompilerExtension
 	public function loadConfiguration(): void
 	{
 		$builder = $this->getContainerBuilder();
-		$params  = $builder->parameters;
+		$params = $builder->parameters;
 		$builder
 			->addDefinition($this->prefix('Directory'))
 			->setFactory(Directory::class, [

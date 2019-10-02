@@ -6,6 +6,7 @@ declare(strict_types = 1);
  * Drago Parameters
  * Package built on Nette Framework
  */
+
 namespace Drago\Parameters;
 
 use Nette\SmartObject;

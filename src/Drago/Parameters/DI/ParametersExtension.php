@@ -14,7 +14,6 @@ use Nette\DI\CompilerExtension;
 
 /**
  * Register services.
- * @package Drago\Parameters
  */
 class ParametersExtension extends CompilerExtension
 {

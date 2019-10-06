@@ -22,7 +22,7 @@ class ParametersExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 		$params = $builder->parameters;
 		$builder
-			->addDefinition($this->prefix('Directory'))
+			->addDefinition($this->prefix('directory'))
 			->setFactory(Directory::class, [
 				$params['appDir'],
 				$params['wwwDir'],

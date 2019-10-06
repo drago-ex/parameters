@@ -2,8 +2,8 @@
 
 declare(strict_types = 1);
 
-use Drago\Parameters\Parameters;
 use Drago\Parameters\DI\ParametersExtension;
+use Drago\Parameters\Parameters;
 use Nette\DI\Compiler;
 use Nette\DI\Container;
 use Nette\DI\ContainerLoader;

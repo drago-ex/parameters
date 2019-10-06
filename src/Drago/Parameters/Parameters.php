@@ -15,7 +15,7 @@ use Nette\SmartObject;
 /**
  * Access to individual directories in the application.
  */
-class Directory
+class Parameters
 {
 	use SmartObject;
 

@@ -7,8 +7,9 @@ declare(strict_types = 1);
  * Package built on Nette Framework
  */
 
-namespace Drago\Parameters;
+namespace Drago\Parameters\DI;
 
+use Drago\Parameters\Parameters;
 use Nette\DI\CompilerExtension;
 
 
@@ -22,8 +23,8 @@ class ParametersExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 		$params = $builder->parameters;
 		$builder
-			->addDefinition($this->prefix('directory'))
-			->setFactory(Directory::class, [
+			->addDefinition($this->prefix('params'))
+			->setFactory(Parameters::class, [
 				$params['appDir'],
 				$params['wwwDir'],
 				$params['tempDir'],

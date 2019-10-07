@@ -1,0 +1,2 @@
+extensions:
+    	- Drago\Parameters\DI\ParametersExtension(%appDir%, %wwwDir%, %tempDir%)

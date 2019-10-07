@@ -18,17 +18,24 @@ use Nette\DI\CompilerExtension;
  */
 class ParametersExtension extends CompilerExtension
 {
+	private $defaults = [];
+
+
+	public function __construct($appDir, $wwwDir, $tempDir)
+	{
+		$this->defaults = [
+			'appDir' => $appDir,
+			'wwwDir' => $wwwDir,
+			'tempDir' => $tempDir
+		];
+	}
+
+
 	public function loadConfiguration(): void
 	{
 		$builder = $this->getContainerBuilder();
-		$params = $builder->parameters;
 		$builder
 			->addDefinition($this->prefix('params'))
-			->setFactory(Parameters::class, [
-				$params['appDir'],
-				$params['wwwDir'],
-				$params['tempDir'],
-				$params['vendorDir'],
-			]);
+			->setFactory(Parameters::class, $this->defaults);
 	}
 }

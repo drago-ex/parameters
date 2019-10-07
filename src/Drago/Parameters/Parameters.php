@@ -28,16 +28,12 @@ class Parameters
 	/** @var string */
 	private $tempDir;
 
-	/** @var string */
-	private $vendorDir;
 
-
-	public function __construct(string $appDir, string $wwwDir, string $tempDir, string $vendorDir)
+	public function __construct(string $appDir, string $wwwDir, string $tempDir)
 	{
 		$this->appDir = $appDir;
 		$this->wwwDir = $wwwDir;
 		$this->tempDir = $tempDir;
-		$this->vendorDir = $vendorDir;
 	}
 
 
@@ -65,14 +61,5 @@ class Parameters
 	public function getTempDir(): string
 	{
 		return $this->tempDir;
-	}
-
-
-	/**
-	 * Path to vendor directory.
-	 */
-	public function getVendorDir(): string
-	{
-		return $this->vendorDir;
 	}
 }

@@ -26,7 +26,7 @@ class ParametersExtension extends CompilerExtension
 		$this->defaults = [
 			'appDir' => $appDir,
 			'wwwDir' => $wwwDir,
-			'tempDir' => $tempDir
+			'tempDir' => $tempDir,
 		];
 	}
 

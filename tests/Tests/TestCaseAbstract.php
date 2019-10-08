@@ -8,7 +8,7 @@ use Nette\DI\Container;
 use Tester\TestCase;
 
 
-class TestCaseAbstract extends TestCase
+abstract class TestCaseAbstract extends TestCase
 {
 	/** @var Container */
 	protected $container;

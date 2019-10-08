@@ -13,21 +13,22 @@ use Tester\Assert;
 
 $container = require __DIR__ . '/../../bootstrap.php';
 
+
 class ParametersExtension extends TestCaseAbstract
 {
-	private function createContainer(array $config, ?string $key = null): Container
+	private function createContainer(): Container
 	{
 		$params = $this->container->getParameters();
 
 		$loader = new ContainerLoader($params['tempDir'], true);
 
-		$class = $loader->load(function (Compiler $compiler) use ($config): void {
+		$class = $loader->load(function (Compiler $compiler) use ($params): void {
 			$compiler->addExtension('params', new \Drago\Parameters\DI\ParametersExtension(
-				$config['appDir'],
-				$config['wwwDir'],
-				$config['tempDir']
+				$params['appDir'],
+				$params['wwwDir'],
+				$params['tempDir']
 			));
-		}, $key);
+		});
 
 		return new $class;
 	}
@@ -35,15 +36,7 @@ class ParametersExtension extends TestCaseAbstract
 
 	public function test01()
 	{
-		$params = $this->container->getParameters();
-
-		$config = [
-			'appDir' => $params['appDir'],
-			'wwwDir' => $params['wwwDir'],
-			'tempDir' => $params['tempDir'],
-		];
-
-		$container = $this->createContainer($config);
+		$container = $this->createContainer();
 
 		Assert::type(Parameters::class, $container->getByType(Parameters::class));
 	}

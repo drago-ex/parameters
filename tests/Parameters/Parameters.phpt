@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Test\Parameters;
 
+use Drago;
 use Test\TestCaseAbstract;
 use Tester\Assert;
 
@@ -14,19 +15,11 @@ class Parameters extends TestCaseAbstract
 {
 	public function test01()
 	{
-		$params = $this->container->getParameters();
+		$class = $this->container->getByType(Drago\Parameters\Parameters::class);
 
-		$parameters = new \Drago\Parameters\Parameters(
-			$params['appDir'],
-			$params['wwwDir'],
-			$params['tempDir']
-		);
-
-		Assert::type('string', $parameters->getAppDir());
-
-		Assert::type('string', $parameters->getWwwDir());
-
-		Assert::type('string', $parameters->getTempDir());
+		Assert::type('string', $class->getAppDir());
+		Assert::type('string', $class->getWwwDir());
+		Assert::type('string', $class->getTempDir());
 	}
 }
 

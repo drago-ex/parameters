@@ -13,7 +13,7 @@ $container = require __DIR__ . '/../bootstrap.php';
 
 class Parameters extends TestCaseAbstract
 {
-	public function test01()
+	public function test01(): void
 	{
 		$class = $this->container->getByType(Drago\Parameters\Parameters::class);
 

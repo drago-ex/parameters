@@ -33,7 +33,7 @@ class ParametersExtension extends TestCaseAbstract
 	}
 
 
-	public function test01()
+	public function test01(): void
 	{
 		$container = $this->createContainer();
 		Assert::type(Parameters::class, $container->getByType(Parameters::class));

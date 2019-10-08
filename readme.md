@@ -12,6 +12,7 @@ Access to parameters in the application.
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fparameters.svg)](https://badge.fury.io/ph/drago-ex%2Fparameters)
 [![Build Status](https://travis-ci.org/drago-ex/parameters.svg?branch=master)](https://travis-ci.org/drago-ex/parameters)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/parameters/badge)](https://www.codefactor.io/repository/github/drago-ex/parameters)
+[![Coverage Status](https://coveralls.io/repos/github/drago-ex/parameters/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/parameters?branch=master)
 
 ## Requirements
 - PHP 7.1 or higher

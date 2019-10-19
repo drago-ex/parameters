@@ -9,13 +9,13 @@ use Drago\Parameters\Parameters;
 use Nette\DI\Compiler;
 use Nette\DI\Container;
 use Nette\DI\ContainerLoader;
-use Test\TestCaseAbstract;
+use Test\TestContainer;
 use Tester\Assert;
 
 $container = require __DIR__ . '/../../bootstrap.php';
 
 
-class ParametersExtension extends TestCaseAbstract
+class ParametersExtension extends TestContainer
 {
 	private function createContainer(): Container
 	{
@@ -37,6 +37,17 @@ class ParametersExtension extends TestCaseAbstract
 	{
 		$container = $this->createContainer();
 		Assert::type(Parameters::class, $container->getByType(Parameters::class));
+	}
+
+
+	public function test02(): void
+	{
+		$container = $this->createContainer();
+		$class = $container->getByType(Parameters::class);
+
+		Assert::type(TYPE_STRING, $class->getTempDir());
+		Assert::type(TYPE_STRING, $class->getAppDir());
+		Assert::type(TYPE_STRING, $class->getWwwDir());
 	}
 }
 

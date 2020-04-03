@@ -34,8 +34,7 @@ class ParametersExtension extends TestContainer
 
 	public function test02(): void
 	{
-		$container = $this->createContainer();
-		$class = $container->getByType(Drago\Parameters\Parameters::class);
+		$class = $this->createContainer()->getByType(Drago\Parameters\Parameters::class);
 
 		Assert::type(TYPE_STRING, $class->getTempDir());
 		Assert::type(TYPE_STRING, $class->getAppDir());

@@ -2,19 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace Test;
 
-use Nette\DI\Container;
-use Tester\TestCase;
-
-
-abstract class TestContainer extends TestCase
+abstract class TestContainer extends Tester\TestCase
 {
-	/** @var Container */
+	/** @var Nette\DI\Container */
 	protected $container;
 
 
-	public function __construct(Container $container)
+	public function __construct(Nette\DI\Container $container)
 	{
 		$this->container = $container;
 	}

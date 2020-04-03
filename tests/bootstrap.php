@@ -20,4 +20,5 @@ $boot->createRobotLoader()
 	->addDirectory(__DIR__ . '/../src')
 	->register();
 
-return $boot->createContainer();
+$boot->createContainer();
+return $boot;

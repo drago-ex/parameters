@@ -9,14 +9,14 @@ declare(strict_types = 1);
 
 namespace Drago\Parameters\DI;
 
-use Drago\Parameters\Parameters;
-use Nette\DI\CompilerExtension;
+use Drago;
+use Nette\DI;
 
 
 /**
  * Register services.
  */
-class ParametersExtension extends CompilerExtension
+class ParametersExtension extends DI\CompilerExtension
 {
 	private $defaults = [];
 
@@ -36,6 +36,6 @@ class ParametersExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 		$builder
 			->addDefinition($this->prefix('params'))
-			->setFactory(Parameters::class, $this->defaults);
+			->setFactory(Drago\Parameters\Parameters::class, $this->defaults);
 	}
 }

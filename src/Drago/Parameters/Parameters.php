@@ -9,7 +9,7 @@ declare(strict_types = 1);
 
 namespace Drago\Parameters;
 
-use Nette\SmartObject;
+use Nette;
 
 
 /**
@@ -17,7 +17,7 @@ use Nette\SmartObject;
  */
 class Parameters
 {
-	use SmartObject;
+	use Nette\SmartObject;
 
 	/** @var string */
 	private $appDir;

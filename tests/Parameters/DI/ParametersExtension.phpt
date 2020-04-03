@@ -2,11 +2,6 @@
 
 declare(strict_types = 1);
 
-namespace Test\DI;
-
-use Drago\Parameters;
-use Nette\DI;
-use Test\TestContainer;
 use Tester\Assert;
 
 $container = require __DIR__ . '/../../bootstrap.php';
@@ -14,13 +9,13 @@ $container = require __DIR__ . '/../../bootstrap.php';
 
 class ParametersExtension extends TestContainer
 {
-	private function createContainer(): DI\Container
+	private function createContainer(): Nette\DI\Container
 	{
 		$params = $this->container->getParameters();
-		$loader = new DI\ContainerLoader($params['tempDir'], true);
+		$loader = new Nette\DI\ContainerLoader($params['tempDir'], true);
 
-		$class = $loader->load(function (DI\Compiler $compiler) use ($params): void {
-			$compiler->addExtension('params', new Parameters\DI\ParametersExtension(
+		$class = $loader->load(function (Nette\DI\Compiler $compiler) use ($params): void {
+			$compiler->addExtension('params', new Drago\Parameters\DI\ParametersExtension(
 				$params['appDir'],
 				$params['wwwDir'],
 				$params['tempDir']
@@ -32,15 +27,15 @@ class ParametersExtension extends TestContainer
 
 	public function test01(): void
 	{
-		$container = $this->createContainer();
-		Assert::type(Parameters\Parameters::class, $container->getByType(Parameters\Parameters::class));
+		$class = $this->createContainer()->getByType(Drago\Parameters\Parameters::class);
+		Assert::type(Drago\Parameters\Parameters::class, $class);
 	}
 
 
 	public function test02(): void
 	{
 		$container = $this->createContainer();
-		$class = $container->getByType(Parameters\Parameters::class);
+		$class = $container->getByType(Drago\Parameters\Parameters::class);
 
 		Assert::type(TYPE_STRING, $class->getTempDir());
 		Assert::type(TYPE_STRING, $class->getAppDir());

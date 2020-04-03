@@ -10,13 +10,13 @@ declare(strict_types = 1);
 namespace Drago\Parameters\DI;
 
 use Drago;
-use Nette\DI;
+use Nette;
 
 
 /**
  * Register services.
  */
-class ParametersExtension extends DI\CompilerExtension
+class ParametersExtension extends Nette\DI\CompilerExtension
 {
 	private $defaults = [];
 

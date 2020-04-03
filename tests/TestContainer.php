@@ -2,14 +2,16 @@
 
 declare(strict_types = 1);
 
+use Nette\DI\Container;
+
 
 abstract class TestContainer extends Tester\TestCase
 {
-	/** @var Nette\DI\Container */
+	/** @var Container */
 	protected $container;
 
 
-	public function __construct(Nette\DI\Container $container)
+	public function __construct(Container $container)
 	{
 		$this->container = $container;
 	}

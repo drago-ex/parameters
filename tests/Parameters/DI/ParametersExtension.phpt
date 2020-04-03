@@ -13,7 +13,6 @@ class ParametersExtension extends TestContainer
 	{
 		$params = $this->container->getParameters();
 		$loader = new Nette\DI\ContainerLoader($params['tempDir'], true);
-
 		$class = $loader->load(function (Nette\DI\Compiler $compiler) use ($params): void {
 			$compiler->addExtension('params', new Drago\Parameters\DI\ParametersExtension(
 				$params['appDir'],

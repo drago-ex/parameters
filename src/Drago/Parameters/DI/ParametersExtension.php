@@ -34,8 +34,7 @@ class ParametersExtension extends Nette\DI\CompilerExtension
 	public function loadConfiguration(): void
 	{
 		$builder = $this->getContainerBuilder();
-		$builder
-			->addDefinition($this->prefix('params'))
+		$builder->addDefinition($this->prefix('params'))
 			->setFactory(Drago\Parameters\Parameters::class, $this->defaults);
 	}
 }

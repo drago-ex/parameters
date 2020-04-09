@@ -18,10 +18,11 @@ use Nette;
  */
 class ParametersExtension extends Nette\DI\CompilerExtension
 {
+	/** @var array */
 	private $defaults = [];
 
 
-	public function __construct($appDir, $wwwDir, $tempDir)
+	public function __construct(string $appDir, string $wwwDir, string $tempDir)
 	{
 		$this->defaults = [
 			'appDir' => $appDir,

@@ -9,14 +9,14 @@ declare(strict_types = 1);
 
 namespace Drago\Parameters\DI;
 
-use Drago;
-use Nette;
+use Drago\Parameters\Parameters;
+use Nette\DI\CompilerExtension;
 
 
 /**
  * Register services.
  */
-class ParametersExtension extends Nette\DI\CompilerExtension
+class ParametersExtension extends CompilerExtension
 {
 	/** @var array */
 	private $defaults = [];
@@ -35,7 +35,7 @@ class ParametersExtension extends Nette\DI\CompilerExtension
 	public function loadConfiguration(): void
 	{
 		$builder = $this->getContainerBuilder();
-		$builder->addDefinition($this->prefix('params'))
-			->setFactory(Drago\Parameters\Parameters::class, $this->defaults);
+		$builder->addDefinition($this->prefix('dirs'))
+			->setFactory(Parameters::class, $this->defaults);
 	}
 }

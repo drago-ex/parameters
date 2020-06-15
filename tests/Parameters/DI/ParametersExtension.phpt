@@ -2,21 +2,23 @@
 
 declare(strict_types = 1);
 
+use Drago\Parameters\DI\ParametersExtension;
 use Drago\Parameters\Parameters;
-use Nette\DI;
+use Nette\DI\Compiler;
+use Nette\DI\Container;
+use Nette\DI\ContainerLoader;
 use Tester\Assert;
 
 $container = require __DIR__ . '/../../bootstrap.php';
 
-
-class ParametersExtension extends TestContainer
+class TestParametersExtension extends TestContainer
 {
-	private function createContainer(): DI\Container
+	private function createContainer(): Container
 	{
 		$params = $this->container->getParameters();
-		$loader = new DI\ContainerLoader($params['tempDir'], true);
-		$class = $loader->load(function (DI\Compiler $compiler) use ($params): void {
-			$compiler->addExtension('params', new Drago\Parameters\DI\ParametersExtension(
+		$loader = new ContainerLoader($params['tempDir'], true);
+		$class = $loader->load(function (Compiler $compiler) use ($params): void {
+			$compiler->addExtension('dirs', new ParametersExtension(
 				$params['appDir'],
 				$params['wwwDir'],
 				$params['tempDir']
@@ -47,5 +49,5 @@ class ParametersExtension extends TestContainer
 	}
 }
 
-$extension = new ParametersExtension($container);
+$extension = new TestParametersExtension($container);
 $extension->run();

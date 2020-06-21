@@ -19,14 +19,9 @@ class Parameters
 {
 	use SmartObject;
 
-	/** @var string */
-	private $appDir;
-
-	/** @var string */
-	private $wwwDir;
-
-	/** @var string */
-	private $tempDir;
+	private string $appDir;
+	private string $wwwDir;
+	private string $tempDir;
 
 
 	public function __construct(string $appDir, string $wwwDir, string $tempDir)

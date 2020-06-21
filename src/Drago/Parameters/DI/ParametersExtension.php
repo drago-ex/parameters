@@ -18,8 +18,7 @@ use Nette\DI\CompilerExtension;
  */
 class ParametersExtension extends CompilerExtension
 {
-	/** @var array */
-	private $defaults = [];
+	private array $defaults = [];
 
 
 	public function __construct(string $appDir, string $wwwDir, string $tempDir)

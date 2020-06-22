@@ -43,9 +43,9 @@ class TestParametersExtension extends TestContainer
 
 	public function test02(): void
 	{
-		Assert::type(TYPE_STRING, $this->geClassByType()->getTempDir());
-		Assert::type(TYPE_STRING, $this->geClassByType()->getAppDir());
-		Assert::type(TYPE_STRING, $this->geClassByType()->getWwwDir());
+		Assert::type('string', $this->geClassByType()->getTempDir());
+		Assert::type('string', $this->geClassByType()->getAppDir());
+		Assert::type('string', $this->geClassByType()->getWwwDir());
 	}
 }
 

@@ -10,7 +10,6 @@ require __DIR__ . '/../vendor/autoload.php';
 Environment::setup();
 date_default_timezone_set('Europe/Prague');
 
-define('TYPE_STRING', 'string');
 define('TEMP_DIR', __DIR__ . '/tmp');
 
 @mkdir(dirname(TEMP_DIR));

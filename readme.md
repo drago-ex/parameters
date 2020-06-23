@@ -43,4 +43,3 @@ $this->getWwwDir();
 ```php
 $this->getTempDir();
 ```
-

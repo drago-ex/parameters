@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/parameters",
 	"type": "library",
-	"description": "Access to parameters in the application.",
+	"description": "Access to parameters in the application for Nette Framework",
 	"license": ["MIT"],
 	"authors": [
 		{

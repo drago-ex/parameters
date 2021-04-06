@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 /**
  * Drago Extension
@@ -19,13 +19,11 @@ class Parameters
 {
 	use SmartObject;
 
-
 	public function __construct(
 		public string $appDir,
 		public string $wwwDir,
 		public string $tempDir,
 	) {
-
 	}
 
 

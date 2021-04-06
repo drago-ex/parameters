@@ -21,8 +21,11 @@ class ParametersExtension extends CompilerExtension
 	private array $defaults = [];
 
 
-	public function __construct(string $appDir, string $wwwDir, string $tempDir)
-	{
+	public function __construct(
+		string $appDir,
+		string $wwwDir,
+		string $tempDir,
+	) {
 		$this->defaults = [
 			'appDir' => $appDir,
 			'wwwDir' => $wwwDir,

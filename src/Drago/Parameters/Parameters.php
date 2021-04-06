@@ -19,16 +19,13 @@ class Parameters
 {
 	use SmartObject;
 
-	private string $appDir;
-	private string $wwwDir;
-	private string $tempDir;
 
+	public function __construct(
+		public string $appDir,
+		public string $wwwDir,
+		public string $tempDir,
+	) {
 
-	public function __construct(string $appDir, string $wwwDir, string $tempDir)
-	{
-		$this->appDir = $appDir;
-		$this->wwwDir = $wwwDir;
-		$this->tempDir = $tempDir;
 	}
 
 

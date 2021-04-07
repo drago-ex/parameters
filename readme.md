@@ -10,7 +10,7 @@ Access to parameters in the application.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/parameters/master/license.md)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fparameters.svg)](https://badge.fury.io/ph/drago-ex%2Fparameters)
-[![Build Status](https://travis-ci.org/drago-ex/parameters.svg?branch=master)](https://travis-ci.org/drago-ex/parameters)
+[![Build Status](https://travis-ci.com/drago-ex/parameters.svg?branch=master)](https://travis-ci.org/drago-ex/parameters)
 [![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/parameters/badge)](https://www.codefactor.io/repository/github/drago-ex/parameters)
 [![Coverage Status](https://coveralls.io/repos/github/drago-ex/parameters/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/parameters?branch=master)
 

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Test: Drago\Parameters\DI\ParametersExtension
+ */
+
 declare(strict_types=1);
 
 use Drago\Parameters\DI\ParametersExtension;
@@ -8,11 +12,22 @@ use Nette\DI\Compiler;
 use Nette\DI\Container;
 use Nette\DI\ContainerLoader;
 use Tester\Assert;
+use Tester\TestCase;
 
 $container = require __DIR__ . '/../../bootstrap.php';
 
-class TestParametersExtension extends TestContainer
+
+class TestParametersExtension extends TestCase
 {
+	protected Container $container;
+
+
+	public function __construct(Container $container)
+	{
+		$this->container = $container;
+	}
+
+
 	private function createContainer(): Container
 	{
 		$params = $this->container->getParameters();
@@ -49,5 +64,4 @@ class TestParametersExtension extends TestContainer
 	}
 }
 
-$extension = new TestParametersExtension($container);
-$extension->run();
+(new TestParametersExtension($container))->run();

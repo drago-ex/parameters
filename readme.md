@@ -26,7 +26,11 @@ composer require drago-ex/parameters
 ## Extension registration
 ```php
 extensions:
-	- Drago\Parameters\DI\ParametersExtension(%appDir%, %wwwDir%, %tempDir%)
+	- Drago\Parameters\DI\ParametersExtension(
+		appDir: %appDir%,
+		wwwDir: %wwwDir%,
+		tempDir: %tempDir%,
+	)
 ```
 
 ## Path to application directory

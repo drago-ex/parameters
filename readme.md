@@ -24,13 +24,9 @@ composer require drago-ex/parameters
 ```
 
 ## Extension registration
-```php
+```neon
 extensions:
-	- Drago\Parameters\DI\ParametersExtension(
-		appDir: %appDir%,
-		wwwDir: %wwwDir%,
-		tempDir: %tempDir%,
-	)
+	- Drago\Parameters\DI\ParametersExtension(appDir: %appDir%, wwwDir: %wwwDir%, tempDir: %tempDir%)
 ```
 
 ## Path to application directory

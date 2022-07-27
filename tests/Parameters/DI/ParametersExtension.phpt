@@ -36,7 +36,7 @@ class TestParametersExtension extends TestCase
 			$compiler->addExtension('dirs', new ParametersExtension(
 				$params['appDir'],
 				$params['wwwDir'],
-				$params['tempDir']
+				$params['tempDir'],
 			));
 		});
 		return new $class;

@@ -18,7 +18,7 @@ use Nette\DI\CompilerExtension;
  */
 class ParametersExtension extends CompilerExtension
 {
-	private array $defaults = [];
+	private array $defaults;
 
 
 	public function __construct(

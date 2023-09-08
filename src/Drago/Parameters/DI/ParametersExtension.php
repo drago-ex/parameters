@@ -22,9 +22,9 @@ class ParametersExtension extends CompilerExtension
 
 
 	public function __construct(
-		string $appDir,
-		string $wwwDir,
-		string $tempDir,
+		readonly string $appDir,
+		readonly string $wwwDir,
+		readonly string $tempDir,
 	) {
 		$this->defaults = [
 			'appDir' => $appDir,

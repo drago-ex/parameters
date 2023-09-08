@@ -20,36 +20,9 @@ class Parameters
 	use SmartObject;
 
 	public function __construct(
-		public string $appDir,
-		public string $wwwDir,
-		public string $tempDir,
+		public readonly string $appDir,
+		public readonly string $wwwDir,
+		public readonly string $tempDir,
 	) {
-	}
-
-
-	/**
-	 * Path to application directory.
-	 */
-	public function getAppDir(): string
-	{
-		return $this->appDir;
-	}
-
-
-	/**
-	 * Path to public directory.
-	 */
-	public function getWwwDir(): string
-	{
-		return $this->wwwDir;
-	}
-
-
-	/**
-	 * Path to temporary directory.
-	 */
-	public function getTempDir(): string
-	{
-		return $this->tempDir;
 	}
 }

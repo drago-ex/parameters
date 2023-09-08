@@ -25,15 +25,15 @@ extensions:
 
 ## Path to application directory
 ```php
-$this->getAppDir();
+$this->appDir;
 ```
 
 ## Path to public directory
 ```php
-$this->getWwwDir();
+$this->wwwDir;
 ```
 
 ## Path to temporary directory
 ```php
-$this->getTempDir();
+$this->tempDir;
 ```

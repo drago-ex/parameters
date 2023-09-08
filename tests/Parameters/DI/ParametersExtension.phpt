@@ -58,9 +58,9 @@ class TestParametersExtension extends TestCase
 
 	public function test02(): void
 	{
-		Assert::type('string', $this->geClassByType()->getTempDir());
-		Assert::type('string', $this->geClassByType()->getAppDir());
-		Assert::type('string', $this->geClassByType()->getWwwDir());
+		Assert::type('string', $this->geClassByType()->tempDir);
+		Assert::type('string', $this->geClassByType()->appDir);
+		Assert::type('string', $this->geClassByType()->wwwDir);
 	}
 }
 

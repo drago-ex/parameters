@@ -9,7 +9,7 @@ Access to parameters in the application.
 [![Coverage Status](https://coveralls.io/repos/github/drago-ex/parameters/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/parameters?branch=master)
 
 ## Technology
-- PHP 8.0 or higher
+- PHP 8.1 or higher
 - composer
 
 ## Installation

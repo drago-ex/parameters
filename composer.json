@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/parameters",
 	"type": "library",
-	"description": "Access to parameters in the application for Nette Framework",
+	"description": "A simple Nette extension for accessing common directory paths (appDir, wwwDir, tempDir) in your application via dependency injection.",
 	"license": ["MIT"],
 	"authors": [
 		{
@@ -10,7 +10,7 @@
 		}
 	],
 	"require": {
-		"php": ">=8.1 <8.4",
+		"php": ">=8.3 <9",
 		"nette/di": "^3.1",
 		"nette/utils": "^4.0"
 	},

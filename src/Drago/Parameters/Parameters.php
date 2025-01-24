@@ -16,12 +16,15 @@ namespace Drago\Parameters;
  */
 readonly class Parameters
 {
-	/** @var string Directory path for the application (typically the root directory of your app). */
-	public string $appDir;
-
-	/** @var string Directory path for the web root (typically the public HTML directory). */
-	public string $wwwDir;
-
-	/** @var string Directory path for temporary files (e.g., cache or logs). */
-	public string $tempDir;
+	/**
+	 * @param string $appDir The directory of the application.
+	 * @param string $wwwDir The directory for the public web files (usually `www` or `public`).
+	 * @param string $tempDir The directory for temporary files (e.g., cache, logs).
+	 */
+	public function __construct(
+		public string $appDir,
+		public string $wwwDir,
+		public string $tempDir,
+	) {
+	}
 }

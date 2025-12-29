@@ -2,7 +2,7 @@
 A lightweight extension for managing application directory paths (such as application, public, and temporary directories)
 within a Nette-based project. Provides a simple way to access these paths via dependency injection.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/parameters/master/license.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/parameters/master/license)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fparameters.svg)](https://badge.fury.io/ph/drago-ex%2Fparameters)
 [![Tests](https://github.com/drago-ex/parameters/actions/workflows/tests.yml/badge.svg)](https://github.com/drago-ex/parameters/actions/workflows/tests.yml)
 [![Coding Style](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml)
@@ -48,4 +48,5 @@ To get the path to the temporary directory (where cache or logs might be stored)
 ```php
 $this->tempDir;
 ```
+
 

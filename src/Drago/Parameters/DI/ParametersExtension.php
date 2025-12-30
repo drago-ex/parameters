@@ -29,9 +29,9 @@ class ParametersExtension extends CompilerExtension
 	 * @param string $tempDir The temporary directory path (cache, logs).
 	 */
 	public function __construct(
-		readonly string $appDir,
-		readonly string $wwwDir,
-		readonly string $tempDir,
+		public readonly string $appDir,
+		public readonly string $wwwDir,
+		public readonly string $tempDir,
 	) {
 		// Initialize the default directory paths
 		$this->defaults = [

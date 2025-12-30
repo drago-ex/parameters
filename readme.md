@@ -48,5 +48,3 @@ To get the path to the temporary directory (where cache or logs might be stored)
 ```php
 $this->tempDir;
 ```
-
-

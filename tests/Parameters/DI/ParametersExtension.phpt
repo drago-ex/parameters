@@ -30,13 +30,19 @@ class TestParametersExtension extends TestCase
 
 	private function createContainer(): Container
 	{
-		$params = $this->container->getParameters();
-		$loader = new ContainerLoader($params['tempDir'], true);
-		$class = $loader->load(function (Compiler $compiler) use ($params): void {
+		$loader = new ContainerLoader(TempDir, true);
+		$class = $loader->load(function (Compiler $compiler): void {
+			$compiler->loadConfig(Tester\FileMock::create('
+			services:
+				- Nette\Http\UrlScript
+				- Nette\Http\Request(@Nette\Http\UrlScript)
+				- Nette\Http\Response
+				- Nette\Http\Session(@Nette\Http\Request, @Nette\Http\Response)
+			', 'neon'));
 			$compiler->addExtension('dirs', new ParametersExtension(
-				$params['appDir'],
-				$params['wwwDir'],
-				$params['tempDir'],
+				dirname(__DIR__, 3) . '/src',
+				dirname(__DIR__, 3) . '/tests',
+				TempDir,
 			));
 		});
 		return new $class;

@@ -1,13 +1,12 @@
-## Drago Parameters
+# Drago Parameters
+
 A lightweight extension for managing application directory paths (such as application, public, and temporary directories)
 within a Nette-based project. Provides a simple way to access these paths via dependency injection.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://raw.githubusercontent.com/drago-ex/parameters/master/license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drago-ex/parameters/blob/master/license)
 [![PHP version](https://badge.fury.io/ph/drago-ex%2Fparameters.svg)](https://badge.fury.io/ph/drago-ex%2Fparameters)
 [![Tests](https://github.com/drago-ex/parameters/actions/workflows/tests.yml/badge.svg)](https://github.com/drago-ex/parameters/actions/workflows/tests.yml)
 [![Coding Style](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml)
-[![CodeFactor](https://www.codefactor.io/repository/github/drago-ex/parameters/badge)](https://www.codefactor.io/repository/github/drago-ex/parameters)
-[![Coverage Status](https://coveralls.io/repos/github/drago-ex/parameters/badge.svg?branch=master)](https://coveralls.io/github/drago-ex/parameters?branch=master)
 
 ## Requirements
 - PHP >= 8.3
@@ -19,7 +18,7 @@ within a Nette-based project. Provides a simple way to access these paths via de
 composer require drago-ex/parameters
 ```
 
-## Extension registration
+## Extension Registration
 To enable the Parameters extension in your Nette project, add the following configuration to your neon file. This registers
 the `ParametersExtension` and injects paths to the application, public, and temporary directories.
 ```neon

@@ -19,26 +19,10 @@ $container = require __DIR__ . '/../../bootstrap.php';
 
 class TestParametersExtension extends TestCase
 {
-	protected Container $container;
-
-
-	public function __construct(Container $container)
-	{
-		$this->container = $container;
-	}
-
-
 	private function createContainer(): Container
 	{
 		$loader = new ContainerLoader(TempDir, true);
 		$class = $loader->load(function (Compiler $compiler): void {
-			$compiler->loadConfig(Tester\FileMock::create('
-			services:
-				- Nette\Http\UrlScript
-				- Nette\Http\Request(@Nette\Http\UrlScript)
-				- Nette\Http\Response
-				- Nette\Http\Session(@Nette\Http\Request, @Nette\Http\Response)
-			', 'neon'));
 			$compiler->addExtension('dirs', new ParametersExtension(
 				dirname(__DIR__, 3) . '/src',
 				dirname(__DIR__, 3) . '/tests',
@@ -49,25 +33,25 @@ class TestParametersExtension extends TestCase
 	}
 
 
-	private function geClassByType(): Parameters
+	private function getParameters(): Parameters
 	{
-		return $this->createContainer()
-			->getByType(Parameters::class);
+		return $this->createContainer()->getByType(Parameters::class);
 	}
 
 
 	public function test01(): void
 	{
-		Assert::type(Parameters::class, $this->geClassByType());
+		Assert::type(Parameters::class, $this->getParameters());
 	}
 
 
 	public function test02(): void
 	{
-		Assert::type('string', $this->geClassByType()->tempDir);
-		Assert::type('string', $this->geClassByType()->appDir);
-		Assert::type('string', $this->geClassByType()->wwwDir);
+		$params = $this->getParameters();
+		Assert::type('string', $params->appDir);
+		Assert::type('string', $params->wwwDir);
+		Assert::type('string', $params->tempDir);
 	}
 }
 
-(new TestParametersExtension($container))->run();
+(new TestParametersExtension)->run();

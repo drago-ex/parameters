@@ -8,7 +8,6 @@ use Drago\Parameters\Parameters;
 use Nette\DI\CompilerExtension;
 
 
-/** Registers the Parameters service with directory paths in the DI container. */
 class ParametersExtension extends CompilerExtension
 {
 	public function __construct(

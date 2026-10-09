@@ -1,7 +1,7 @@
 {
 	"name": "drago-ex/parameters",
-	"type": "library",
 	"description": "A simple Nette extension for accessing common directory paths (appDir, wwwDir, tempDir) in your application via dependency injection.",
+	"type": "library",
 	"license": ["MIT"],
 	"authors": [
 		{

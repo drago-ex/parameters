@@ -9,16 +9,19 @@ within a Nette-based project. Provides a simple way to access these paths via de
 [![Coding Style](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml/badge.svg)](https://github.com/drago-ex/parameters/actions/workflows/coding-style.yml)
 
 ## Requirements
+
 - PHP >= 8.3
 - Nette Framework
 - Composer
 
 ## Installation
+
 ```
 composer require drago-ex/parameters
 ```
 
 ## Extension Registration
+
 To enable the Parameters extension in your Nette project, add the following configuration to your neon file. This registers
 the `ParametersExtension` and injects paths to the application, public, and temporary directories.
 ```neon
@@ -28,21 +31,25 @@ extensions:
 This will automatically inject the directory paths as services into your project.
 
 ## Accessing Directories in Your Application
+
 Once registered, you can access the directory paths throughout your application using the following properties:
 
 ## Application Directory
+
 To get the path to your application's directory (usually the root directory of your app), use:
 ```php
 $this->appDir;
 ```
 
 ## Public Directory
+
 To get the path to your public directory (e.g., the `www` or `public` directory):
 ```php
 $this->wwwDir;
 ```
 
 ## Temporary Directory
+
 To get the path to the temporary directory (where cache or logs might be stored):
 ```php
 $this->tempDir;

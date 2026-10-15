@@ -2,7 +2,7 @@
 	"name": "drago-ex/parameters",
 	"description": "A simple Nette extension for accessing common directory paths (appDir, wwwDir, tempDir) in your application via dependency injection.",
 	"type": "library",
-	"license": ["MIT"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Zdeněk Papučík",
@@ -22,7 +22,9 @@
 		"phpstan/phpstan-nette": "^2.0"
 	},
 	"autoload": {
-		"classmap": ["src/"],
+		"classmap": [
+			"src/"
+		],
 		"psr-4": {
 			"Drago\\": "src"
 		}

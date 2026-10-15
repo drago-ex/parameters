@@ -10,7 +10,7 @@ within a Nette-based project. Provides a simple way to access these paths via de
 
 ## Requirements
 
-- PHP >= 8.3
+- PHP >= 8.3, < 9
 - Nette Framework
 - Composer
 

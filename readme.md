@@ -22,35 +22,36 @@ composer require drago-ex/parameters
 
 ## Extension Registration
 
-To enable the Parameters extension in your Nette project, add the following configuration to your neon file. This registers
-the `ParametersExtension` and injects paths to the application, public, and temporary directories.
+Register the extension in your neon configuration and pass the directories:
 ```neon
 extensions:
-	- Drago\\Parameters\\DI\\ParametersExtension(appDir: %appDir%, wwwDir: %wwwDir%, tempDir: %tempDir%)
+	- Drago\Parameters\DI\ParametersExtension(appDir: %appDir%, wwwDir: %wwwDir%, tempDir: %tempDir%)
 ```
-This will automatically inject the directory paths as services into your project.
+
+The extension registers one service, `Drago\Parameters\Parameters`, which holds the three paths.
 
 ## Accessing Directories in Your Application
 
-Once registered, you can access the directory paths throughout your application using the following properties:
+Inject the `Parameters` service wherever you need the paths:
 
-## Application Directory
-
-To get the path to your application's directory (usually the root directory of your app), use:
 ```php
-$this->appDir;
+use Drago\Parameters\Parameters;
+
+final class ImageStorage
+{
+	public function __construct(
+		private readonly Parameters $parameters,
+	) {
+	}
+
+
+	public function getUploadDir(): string
+	{
+		return $this->parameters->wwwDir . '/uploads';
+	}
+}
 ```
 
-## Public Directory
-
-To get the path to your public directory (e.g., the `www` or `public` directory):
-```php
-$this->wwwDir;
-```
-
-## Temporary Directory
-
-To get the path to the temporary directory (where cache or logs might be stored):
-```php
-$this->tempDir;
-```
+- `appDir` - the application directory (usually `app/`).
+- `wwwDir` - the public directory (`www/` or `public/`).
+- `tempDir` - the temporary directory for cache and similar files.

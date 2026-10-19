@@ -16,6 +16,9 @@ Use this file as package-specific guidance when working in this repository. Keep
 - `.github/`: CI workflows; keep their PHP versions and commands consistent with Composer and the package scripts.
 - `composer.json`: package metadata, dependency constraints, autoloading, and available Composer scripts.
 
+## Key Parts
+- `DI\ParametersExtension` registers one `Drago\Parameters\Parameters` service with `appDir`, `wwwDir` and `tempDir`, configured through constructor arguments in `extensions:`.
+
 ## Dependencies
 
 Composer constraints describe the package contract. Before changing integration behavior, inspect the source and the actual call sites in this package; do not infer runtime usage solely from dependency declarations.

@@ -48,9 +48,26 @@ class TestParametersExtension extends TestCase
 	public function test02(): void
 	{
 		$params = $this->getParameters();
-		Assert::type('string', $params->appDir);
-		Assert::type('string', $params->wwwDir);
-		Assert::type('string', $params->tempDir);
+		Assert::same(dirname(__DIR__, 3) . '/src', $params->appDir);
+		Assert::same(dirname(__DIR__, 3) . '/tests', $params->wwwDir);
+		Assert::same(TempDir, $params->tempDir);
+	}
+
+
+	public function testReadmeConfiguration(): void
+	{
+		$loader = new ContainerLoader(TempDir, true);
+		$class = $loader->load(function (Compiler $compiler): void {
+			$compiler->addExtension('extensions', new Nette\DI\Extensions\ExtensionsExtension);
+			$compiler->addConfig(['parameters' => ['appDir' => '/app', 'wwwDir' => '/www', 'tempDir' => '/temp']]);
+			$compiler->loadConfig(Tester\FileMock::create('
+				extensions:
+					- Drago\Parameters\DI\ParametersExtension(appDir: %appDir%, wwwDir: %wwwDir%, tempDir: %tempDir%)
+			', 'neon'));
+		}, 'readme');
+
+		$params = (new $class)->getByType(Parameters::class);
+		Assert::same(['/app', '/www', '/temp'], [$params->appDir, $params->wwwDir, $params->tempDir]);
 	}
 }
 

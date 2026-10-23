@@ -1,5 +1,7 @@
 # Drago Parameters
 
+English | [Čeština](readme.cs.md)
+
 A lightweight extension for managing application directory paths (such as application, public, and temporary directories)
 within a Nette-based project. Provides a simple way to access these paths via dependency injection.
 

@@ -14,7 +14,7 @@ use Nette\DI\ContainerLoader;
 use Tester\Assert;
 use Tester\TestCase;
 
-$container = require __DIR__ . '/../../bootstrap.php';
+require __DIR__ . '/../../bootstrap.php';
 
 
 class TestParametersExtension extends TestCase

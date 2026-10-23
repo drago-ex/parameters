@@ -7,7 +7,7 @@ Use this file as package-specific guidance when working in this repository. Keep
 - **Type**: library
 - **Purpose**: A simple Nette extension for accessing common directory paths (appDir, wwwDir, tempDir) in your application via dependency injection.
 - **PHP**: >=8.3 <9
-- **Runtime dependencies**: nette/di (^3.1), nette/utils (^4.0)
+- **Runtime dependencies**: nette/di (^3.1)
 - **License**: MIT
 
 ## Repository Layout
@@ -22,12 +22,12 @@ Use this file as package-specific guidance when working in this repository. Keep
 ## Dependencies
 
 Composer constraints describe the package contract. Before changing integration behavior, inspect the source and the actual call sites in this package; do not infer runtime usage solely from dependency declarations.
-Development dependencies include nette/tester (^2.5), nette/http (^3.3), nette/bootstrap (^3.2), tracy/tracy (^2.10), phpstan/phpstan-nette (^2.0).
+Development dependencies include nette/tester (^2.5), phpstan/phpstan-nette (^2.0).
 
 ## Essential Commands
 
 ```bash
-composer tester                 # tester tests -s
+composer tester                 # tester tests -s -C
 composer phpstan                # phpstan analyse
 ```
 

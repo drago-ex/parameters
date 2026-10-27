@@ -1,7 +1,5 @@
 # Drago Parameters
 
-[English](readme.md) | Čeština
-
 Malé rozšíření pro cesty k adresářům aplikace (aplikace, veřejný a dočasný adresář)
 v projektu na Nette. Poskytuje jednoduchý přístup k těmto cestám přes dependency injection.
 

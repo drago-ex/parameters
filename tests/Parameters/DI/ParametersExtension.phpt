@@ -1,10 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Test: Drago\Parameters\DI\ParametersExtension
  */
-
-declare(strict_types=1);
 
 use Drago\Parameters\DI\ParametersExtension;
 use Drago\Parameters\Parameters;
